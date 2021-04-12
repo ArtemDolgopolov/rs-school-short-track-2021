@@ -10,21 +10,23 @@
  * stack.pop(); // undefined
  *
  */
-// class Stack {
-//   push(element) {
-//     [].push(element);
-//   }
+class Stack {
+  constructor() {
+    this.stack = [];
+  }
 
-//   pop() {
-//     if ([].length === 0) {
-//       return 'Not enough place';
-//     }
-//     return [].pop();
-//   }
+  push(item) {
+    this.stack.push(item);
+  }
 
-//   peek() {
-//     return [][[].length - 1];
-//   }
-// }
+  pop() {
+    return this.stack.pop();
+  }
 
-// module.exports = Stack;
+  peek() {
+    // eslint-disable-next-line no-unused-expressions
+    return this.stack[this.stack.length - 1];
+  }
+}
+
+module.exports = Stack;
