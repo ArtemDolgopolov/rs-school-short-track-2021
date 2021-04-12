@@ -10,18 +10,21 @@
  * stack.pop(); // undefined
  *
  */
-class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
-  }
+// class Stack {
+//   push(element) {
+//     [].push(element);
+//   }
 
-  pop() {
-    throw new Error('Not implemented');
-  }
+//   pop() {
+//     if ([].length === 0) {
+//       return 'Not enough place';
+//     }
+//     return [].pop();
+//   }
 
-  peek() {
-    throw new Error('Not implemented');
-  }
-}
+//   peek() {
+//     return [][[].length - 1];
+//   }
+// }
 
-module.exports = Stack;
+// module.exports = Stack;

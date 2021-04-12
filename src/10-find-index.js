@@ -11,8 +11,22 @@
  * For ([1, 2, 3], 2) should return 1
  *
  */
-function findIndex(/* array, value */) {
-  throw new Error('Not implemented');
+// eslint-disable-next-line no-unused-vars
+function findIndex(array, value) {
+  let firstEl = 0;
+  let lastEl = array.length - 1;
+
+  while (firstEl <= lastEl) {
+    const middleEl = Math.floor((firstEl + lastEl) / 2);
+    if (array[middleEl] === value) {
+      return middleEl;
+    } if (array[middleEl] < value) {
+      firstEl = middleEl + 1;
+    } else {
+      lastEl = middleEl - 1;
+    }
+  }
+  return -1;
 }
 
 module.exports = findIndex;
